@@ -7,10 +7,9 @@ spring:
 
   kafka:
     bootstrap-servers: 10.10.10.60:9092
-    consumer:
-      key-deserializer: org.apache.kafka.common.serialization.StringSerializer
-      value-deserializer: org.apache.kafka.common.serialization.StringSerializer
-      group-id: abcd-group-1
+    producer:
+      key-serializer: org.apache.kafka.common.serialization.LongSerializer
+      value-serializer: org.springframework.kafka.support.serializer.JsonSerializer
 
 logging:
   level:
